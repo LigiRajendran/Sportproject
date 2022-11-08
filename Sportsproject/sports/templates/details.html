@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body%}
+<div class="container">
+    <div class="row">
+        <div class="col-mid-6" style="width: 18rem;  background-color: rgba(255,0,0,0.1);">
+            <h3>{{sports.name}}<br></h3>
+
+                <img src="{{sports.img.url}}" width="150" height="150">
+                  <div class="col-mid-6">
+                        <h6>{{sports.desc}}<br></h6>
+                        <h6>{{sports.country}}<br></h6>
+                        <a class="btn btn-warning" href="{% url 'sportsapp:update' sports.id %}">Update</a>
+                        <a class="btn btn-danger" href="{% url 'sportsapp:delete' sports.id %}">Delete</a>
+                    </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock%}
